@@ -1,33 +1,29 @@
-*{
+* {
   margin: 0;
   padding: 0;
-} 
-body{
+}
+
+body {
   background-color: aqua;
-  
 }
 
 .container {
-  
   background-color: lavender;
   border-radius: 50%;
   max-width: 95vw;
   height: 95vh;
   display: grid;
-  grid-template-columns: repeat(3,1fr) repeat(4,2fr) repeat(3,1fr);
-  grid-template-rows: repeat(10,10%);
-  box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
-  background-image: linear-gradient(-45deg, rgba(255,255,220,.3), lavender, transparent 100%)
-  
-
+  grid-template-columns: repeat(3, 1fr) repeat(4, 2fr) repeat(3, 1fr);
+  grid-template-rows: repeat(10, 10%);
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, .5);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 220, .3), lavender, transparent 100%)
 }
 
-#screen{
+#screen {
   border: medium inset black;
   box-shadow: inset 0px 0px 7px 4px deeppink;
   background: black;
   background-image: linear-gradient(160deg, rgba(244, 245, 243, 0.37), black, transparent 100%);
-
   grid-row: 3/span 5;
   grid-column: 4/span 4;
 }
@@ -43,11 +39,12 @@ img {
 .gameText {
   grid-column: 5/7;
   grid-row: 7/8;
-  color:white;
+  color: white;
   align-self: center;
   justify-self: center;
   font-size: 1.5vw;
 }
+
 /* .flex {
   display: flex;
   justify-content: center;
@@ -60,160 +57,160 @@ img {
   width: 3vw;
   height: 3vh;
   border-radius: 50%;
-  cursor:pointer;
-  box-shadow: inset -1px -5px 2px rgba(0,0,0,.4);
+  cursor: pointer;
+  box-shadow: inset -1px -5px 2px rgba(0, 0, 0, .4);
   background-image: linear-gradient(-85deg, rgba(115, 168, 62, 0.37) 0%, transparent 100%)
 }
 
 .buttons:hover {
-background-image: linear-gradient(-85deg, rgba(45, 66, 22, 0.575) 0%, transparent 100%)}
+  background-image: linear-gradient(-85deg, rgba(45, 66, 22, 0.575) 0%, transparent 100%)
+}
 
 .buttons:active {
-  background-image: linear-gradient(-85deg, rgba(25, 32, 16, 0.705),  rgba(25, 32, 16, 0.705), transparent 100%);
+  background-image: linear-gradient(-85deg, rgba(25, 32, 16, 0.705), rgba(25, 32, 16, 0.705), transparent 100%);
   border: 1px outset rgba(25, 32, 16, 0.705);
   box-shadow: -1px 1px 9px 1px #666;
   transform: translateY(1px);
+  margin-bottom: 2px;
 }
 
-
-
- .left {
+.left {
   grid-row: 7;
   grid-column: 2;
   align-self: end;
   justify-self: end;
 }
 
-.right  {
-    grid-row: 8;
-    grid-column: 3;
-    align-self: start;
-    justify-self: start;
+.right {
+  grid-row: 8;
+  grid-column: 3;
+  align-self: start;
+  justify-self: start;
+}
 
-  
-  }
+.select {
+  grid-row: 9;
+  grid-column: 4;
+  align-self: start;
+  justify-self: start;
+}
 
-  .select {
-    grid-row: 9;
-    grid-column: 4;
-    align-self: start;
-    justify-self: start;
-  }
+.cancel {
+  grid-row: 9;
+  grid-column: 4;
+  align-self: start;
+  justify-self: end;
+}
 
-  .cancel {
-    grid-row: 9;
-    grid-column: 4;
-    align-self: start;
-    justify-self: end;
-  }
+.buttonCon p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1vw;
+  transform: rotate(25deg) translateX(0) translateY(1.40em);
+}
 
-  .buttonCon p{
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1vw;
-    transform: rotate(25deg) translateX(0) translateY(1.40em);
-  }
+.star-five {
+  background: rgb(150, 77, 223);
+  transform: rotate(60deg);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-image: linear-gradient(50deg, rgba(150, 77, 223), rgba(194, 167, 221, 0.815), transparent 100%);
+  grid-row: 1/span 1;
+  grid-column: 6/span 1;
+  box-shadow: inset 1px 6px 12px rgba(191, 148, 235, 0.842), inset -1px -10px 5px rgba(173, 125, 221, 0.822), 1px 2px 1px rgba(181, 137, 224, 0.822);
+}
 
+#star2 {
+  grid-column: 2;
+  grid-row: 5;
+}
 
-  .star-five {
-    background: rgb(150, 77, 223);
-    transform: rotate(60deg);
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    background-image: linear-gradient(50deg, rgba(150, 77, 223),  rgba(194, 167, 221, 0.815), transparent 100%);
-    grid-row: 1/span 1;
-    grid-column: 6/span 1;
-    box-shadow:  inset 1px 6px 12px  rgba(191, 148, 235, 0.842), inset -1px -10px 5px rgba(173, 125, 221, 0.822), 1px 2px 1px rgba(181, 137, 224, 0.822);
-    
-  }
+#star3 {
+  grid-column: -3;
+  grid-row: 4;
+}
 
-  #star2{
-    grid-column: 2;
-    grid-row: 5;
-  }
-  #star3{
-    grid-column: -3;
-    grid-row: 4;
-  }
-  #star4{
-    grid-column: 6;
-    grid-row: -3;
-  }
-  #star5{
-    grid-column: 8;
-    grid-row: 7;
-  }
+#star4 {
+  grid-column: 6;
+  grid-row: -3;
+}
 
-  .heart {
-    background-color: red;
-    display: inline-block;
-    height: 30px;
-    margin: 0 10px;
-    position: relative;
-    top: 0;
-    transform: rotate(-45deg);
-    width: 30px;
-    grid-column: 5;
-    grid-row: -3;
-    justify-self: end;
-    
-    
-    box-shadow: -1px -5px 13px 0px black;
-  }
-  
-  .heart:before,
-  .heart:after {
-    content: "";
-    background-color: red;
-    border-radius: 50%;
-    height: 30px;
-    position: absolute;
-    width: 30px;
-  }
-  
-  .heart:before {
-    top: -15px;
-    left: 0;
-    background-image: linear-gradient(180deg, rgb(151, 66, 66), red, transparent 100%);
-  }
-  
-  .heart:after {
-    left: 15px;
-    top: 0;
-    background-image: linear-gradient(222deg, rgb(151, 66, 66), red, transparent 100%);
-  }
+#star5 {
+  grid-column: 8;
+  grid-row: 7;
+}
 
-  #heart2 {
-    grid-column: 3;
-    grid-row: 3;
-  }
-  #heart3 {
-    grid-column: 8;
-    grid-row: 6;
-  }
-  #heart4 {
-    grid-column: 7;
-    grid-row: 9;
-  }
+.heart {
+  background-color: red;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+  grid-column: 5;
+  grid-row: -3;
+  justify-self: end;
+  box-shadow: -1px -5px 13px 0px black;
+}
 
-  .icons{
-    height: 30%;
-    color: white;
-  }
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
 
-  .iconCon {
-    display: flex;
-    grid-column: 4/span 4;
-    grid-row: 3;
-    color: white;
-    z-index: 1;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  .fas {
-    font-size: 2em;
-    padding:1%;
-  }
+.heart:before {
+  top: -15px;
+  left: 0;
+  background-image: linear-gradient(180deg, rgb(151, 66, 66), red, transparent 100%);
+}
 
-  .fa-utensils {
-    border: 1px solid white;
-  }
+.heart:after {
+  left: 15px;
+  top: 0;
+  background-image: linear-gradient(222deg, rgb(151, 66, 66), red, transparent 100%);
+}
+
+#heart2 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#heart3 {
+  grid-column: 8;
+  grid-row: 6;
+}
+
+#heart4 {
+  grid-column: 7;
+  grid-row: 9;
+}
+
+.icons {
+  height: 30%;
+  color: white;
+}
+
+.iconCon {
+  display: flex;
+  grid-column: 4/span 4;
+  grid-row: 3;
+  color: white;
+  z-index: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fas {
+  font-size: 2em;
+  padding: 1%;
+}
+
+.iconSelected {
+  border: 1px solid white;
+  background-image: linear-gradient(222deg, rgb(151, 66, 66), red, transparent 100%)
+}
