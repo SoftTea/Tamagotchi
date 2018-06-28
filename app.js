@@ -75,7 +75,7 @@ class Tomagotchi {
             }
         }
         this.dead = false;
-        this.timeAlive = 58;
+        this.timeAlive = 0;
         this.eatingBind = $('.fa-utensils').on('click', this.eat.bind(this));
         this.sleepyBind = $('.fa-bed').on('click', this.sleep.bind(this));
         this.playBind = $('.fa-gamepad').on('click', this.play.bind(this));
@@ -207,7 +207,7 @@ class Tomagotchi {
     };
 }
 
-// let name = prompt('What is the name of your lynchian-mon');
+
 
 
 // class ErasureLynch extends Tomagotchi {
@@ -218,5 +218,16 @@ class Tomagotchi {
 //     }
 // }
 
-const david = new Tomagotchi('David');
+// let name = prompt('What is the name of your lynchian-mon');
+
+const david = new Tomagotchi('name');
+
+$('i').on('mouseenter', (e)=>{
+    $('i').removeClass('iconSelected')
+    $(e.currentTarget).addClass('iconSelected');
+})
+
+
+
+
  
