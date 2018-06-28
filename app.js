@@ -75,7 +75,7 @@ class Tomagotchi {
             }
         }
         this.dead = false;
-        this.timeAlive = 0;
+        this.timeAlive = 58;
         this.eatingBind = $('.fa-utensils').on('click', this.eat.bind(this));
         this.sleepyBind = $('.fa-bed').on('click', this.sleep.bind(this));
         this.playBind = $('.fa-gamepad').on('click', this.play.bind(this));
@@ -142,10 +142,17 @@ class Tomagotchi {
                 }
             }
             if (this.hunger >= 10 || this.sleepy >= 10 || this.boredom >= 10) {
-                $('.gameText').text('David has died');
+                $('.gameText').text(`Your lynchia-mon ${this.name} has died`);
                 this.dead = true;
                 $('img').attr('src',`images/david-lynch-teaches-typing-9-620x349 (2).jpg`);
                 clearInterval(this.timer)
+            }
+            if(this.timeAlive === 60){
+            //    const test = new ErasureLynch('Penny');
+            //    clearInterval(this.timer);
+            //     test.timeAlive = 60;
+            $('img').attr('src',`images/eraserhead-david-lynch-1200x520.jpg`);
+            $('.gameText').text(`${this.name} has evolved to an eraser lynchia-mon`)
             }
 
         }, 1000);
@@ -200,5 +207,16 @@ class Tomagotchi {
     };
 }
 
-let name = prompt('What is the name of your lynchian-mon');
-const david = new Tomagotchi(name);
+// let name = prompt('What is the name of your lynchian-mon');
+
+
+// class ErasureLynch extends Tomagotchi {
+//     constructor () {
+//         super(name);
+//         this.superLynch =  $('img').attr('src',`images/eraserhead-david-lynch-1200x520.jpg`);
+//         this.evolText =  $('.gameText').text(`${this.name} has evolved to an eraser lynchia-mon`)
+//     }
+// }
+
+const david = new Tomagotchi('David');
+ 
